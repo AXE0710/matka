@@ -1,0 +1,89 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: black;
+    background-image: url("https://picsum.photos/2000/1000");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.container {
+    color: aliceblue;
+    width: 300px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.800);
+    border: 2px solid rgb(83, 69, 69);
+    box-shadow: 0 0 20px 0 rgba(1, 153, 255, 0.5);
+}
+
+form {
+    gap: 2px;
+    display: flex;
+    flex-direction: column;
+
+    font-family: "Rubik Bubbles", sans-serif;
+    font-size: 1rem;
+    box-shadow: 0 0 20px 0 rgba(1, 153, 255, 0.5);
+}
+
+label {
+    margin-top: 10px;
+}
+
+input, select, button {
+
+
+
+    margin: 5px;
+}
+
+input {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid rgb(83, 69, 69);
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.692);
+    color: aliceblue;
+    box-shadow: 0 0 10px 0 rgba(1, 153, 255, 0.5);
+}
+
+select {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid rgb(83, 69, 69);
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.692);
+    color: aliceblue;
+    box-shadow: 0 0 10px 0 rgba(1, 153, 255, 0.5);
+}
+
+button {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid rgb(83, 69, 69);
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.692);
+    color: aliceblue;
+    box-shadow: 0 0 10px 0 rgba(1, 153, 255, 0.5);
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.692);
+    color: rgb(1, 153, 255);
+    box-shadow: 0 0 10px 0 rgba(1, 153, 255, 0.5);
+}
+
+.text {
+    text-shadow: 0 0 20px rgba(1, 153, 255, 0.5);
+    font-size: 1rem;
+    font-family: "Rubik Bubbles", sans-serif;
+}

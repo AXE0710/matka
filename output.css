@@ -650,7 +650,7 @@ video {
   animation: flip 3s ease-in-out infinite;
   width: auto;
   height: 25vh;
-  animation: shine 3s ease-in-out infinite;
+  /* animation: shine 3s ease-in-out infinite; */
 }
 
 @keyframes flip {
@@ -667,10 +667,25 @@ video {
   }
 }
 
+@keyframes shine {
+  0% {
+    background-position: -1000px;
+  }
+
+  50% {
+    background-position: 1000px;
+  }
+
+  100% {
+    background-position: -1000px;
+  }
+
+}
+
 body{
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-  background-image: url("https://t3.ftcdn.net/jpg/02/57/00/80/360_F_257008035_kMFFtr6lb6nM46Axqmi22xi8Nj6vkdgK.jpg");
+  background-image: url("https://t3.ftcdn.net/jpg/03/51/57/44/360_F_351574443_6mZtd2RFcaGXJQPABkbMEV76lRwltn0q.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -682,12 +697,12 @@ body{
   height: 30vh;
   /* @apply bg-white; */
   display: flex;
-  background-image: url("https://media.tenor.com/FFBQvKwQzYUAAAAC/fire-hot.gif");
-  background-repeat: repeat;
-  /* background-size: contain; */
+  background-image: url("https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L2lzMTYwNjItaW1hZ2Uta3d2eWZrd3IuanBn.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   background-position: center;
   /* red glow on bottom */
-  box-shadow: 0 0 7px 7px rgba(255, 0, 0, 0.651);
+  box-shadow: 0 0 7px 7px orange;
   /* animation: heat 3s ease-in-out infinite; */
   border-bottom: 2px solid black;
 }
@@ -706,8 +721,9 @@ body{
   height: 100%;
   /* @apply bg-gray-800; */
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
+  flex-direction: column;
   /* background-image: url("https://media.tenor.com/FFBQvKwQzYUAAAAC/fire-hot.gif");
     background-repeat: repeat;
     background-size: contain;
@@ -725,4 +741,152 @@ body{
   /* font bold */
   font-weight: 900;
   /* -webkit-background-clip: text; */
+}
+
+.search {
+  top : 0;
+  width: 100%;
+  height: 20%;
+  background-color: transparent;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  /* align-items: right; */
+}
+
+.input {
+  width: 20%;
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid rgb(65, 58, 58);
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 1rem;
+  background-color: transparent;
+  /* display: flex; */
+  right: 0;
+  margin: 10px;
+  animation: glowing-border 5s infinite;
+  color: rgb(255, 255, 255);
+}
+
+.input:focus {
+  outline: none;
+  border : none;
+}
+
+@keyframes glowing-border {
+/* color changing border */
+  0% {
+    border-color: rgb(255, 0, 0);
+    box-shadow: 0 0 10px rgb(255, 145, 0);
+  }
+  50% {
+    border-color: rgb(255, 0, 0);
+    box-shadow: 0 0 20px rgb(255, 145, 0);
+  }
+  100% {
+    border-color: rgb(255, 0, 0);
+    box-shadow: 0 0 10px rgb(255, 145, 0);
+  }
+}
+
+@media  screen and (max-width: 700px) {
+  .banner > .left {
+    display: none;
+  }
+  .banner > .right {
+    width: 100%;
+  }
+  
+}
+
+.drop-down {
+  width: 30px;
+  height: 30px;
+  background-color: red;
+  background-image: url("https://cdna.artstation.com/p/assets/images/images/039/579/814/original/jericho-niduaza-anc230-smoking-cauldron-gif-niduaza-jericho.gif?1626305223");
+  /* background-attachment: fixed; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 2px solid rgb(77, 77, 77);
+  box-shadow: 0 0 5px 5px rgb(255, 166, 0);
+  background-position: center;
+  border-radius: 50%; 
+  margin-left: 10px;
+  margin-right: 10px;
+
+}
+
+.drop-down:active {
+
+}
+
+.order-food {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.card {
+  width: 200px;
+  height: 280px;
+  background-color: rgba(255, 94, 0, 0.651);
+  color: #e5e7eb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10px;
+  border: 2px solid rgb(83, 69, 69);
+}
+
+.card > .card-img {
+  width: 100%;
+  height: 50%;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid rgb(83, 69, 69);
+}
+
+.card > .card-img > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card-content {
+  width: 100%;
+  height: 50%;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* button */
+.btn {
+  width: auto;
+  height: 20%;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: black;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  /* display: flex; */
+  padding: 5px;
 }
